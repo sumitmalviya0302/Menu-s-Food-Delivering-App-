@@ -43,12 +43,15 @@
 .restaurants-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .restaurant-card {
   width: 300px;
   margin-top: 20px;
+  box-sizing: border-box;
+  contain: content;
+  position: relative;
 }
 
 .restaurant-card > h3 {
@@ -109,9 +112,15 @@
 }
 
 .restaurant-card:hover {
-  border: 1px solid grey;
-  box-shadow: rgb(197, 194, 194);
+  border: 0.5px solid rgb(148, 147, 147);
+  box-shadow: rgb(24, 24, 24);
 }
+
+.link-style{
+  text-decoration:none;
+  color:inherit;
+}
+
 
 .Footer-section {
   margin: 5px 10px;
@@ -119,3 +128,4 @@
   display: flex;
   justify-content: center;
 }
+
