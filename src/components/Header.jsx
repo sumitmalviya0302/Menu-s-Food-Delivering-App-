@@ -23,10 +23,6 @@ const Header = () => {
             <li><Link className="pr-3 hover:text-red-400" to='/cart'>Cart</Link></li>
           </ul>
         </div>
-
-        <h3 className="mt-6"><Link to="/instamart">InstaMart</Link></h3>
-
-        
           {isLogin ? (
             <button className=" my-3 px-2" onClick={()=>setIsLogin(true)}>Logout</button>
           ) : (
