@@ -24,6 +24,8 @@ const Header = () => {
           </ul>
         </div>
 
+        <h3 className="mt-6"><Link to="/instamart">InstaMart</Link></h3>
+
         
           {isLogin ? (
             <button className=" my-3 px-2" onClick={()=>setIsLogin(true)}>Logout</button>

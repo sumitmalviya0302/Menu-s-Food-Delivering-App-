@@ -7,7 +7,8 @@ import useAllRestaurant from "../utils/useAllRestaurant";
 
 
 
-const Body = () => {
+// eslint-disable-next-line react/prop-types
+const Body = ({user}) => {
 
     const {searchText, allRestaurants, filteredRestaurant, onSearchChange, setFilteredRestaurant} = useAllRestaurant()
   
@@ -34,7 +35,7 @@ const Body = () => {
         </div>
         <div className="flex flex-wrap justify-between">
           {filteredRestaurant.map((restaurant) => (
-            <Link className="link-style" to={'/restaurant/'+restaurant.data.id} key={restaurant.data.id}><RestaurantCard  {...restaurant.data} /></Link>
+            <Link className="link-style" to={'/restaurant/'+restaurant.data.id} key={restaurant.data.id}><RestaurantCard  {...restaurant.data} user={user} /></Link>
           ))}
         </div>
       </div>

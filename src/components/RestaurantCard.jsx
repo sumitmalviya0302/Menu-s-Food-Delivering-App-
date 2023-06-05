@@ -3,7 +3,7 @@
 import { IMG_CDN_URL } from "../config";
 const RestaurantCard = (props) => {
   
-    const{name,cuisines,cloudinaryImageId,costForTwoString,minDeliveryTime,avgRating} = props;
+    const{name,cuisines,cloudinaryImageId,costForTwoString,minDeliveryTime,avgRating,user} = props;
 
 
   return (
@@ -25,6 +25,7 @@ const RestaurantCard = (props) => {
             <hr className="w-10/12 text-center mx-auto text-blue-600  " />
             <p className="text-center text-blue-600">Quick View</p>
         </div>
+        <h1>{user.name}</h1>
       </div>
     </>
   );
