@@ -12,6 +12,7 @@ const getMenuDetails = async() =>{
 
     const json = await menuData.json();
     setMenu(json.data)
+    
 }
 
 return menu

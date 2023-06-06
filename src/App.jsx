@@ -10,6 +10,8 @@ import Cart from "./components/Cart";
 import {Outlet, createBrowserRouter} from 'react-router-dom'
 import Shimmer from "./components/Shimmer";
 import InstaMartProfile from "./components/InstaMartProfile";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 const About = lazy(()=>import("./components/About"))
 const Contact = lazy(()=>import("./components/Contact"))
@@ -20,11 +22,13 @@ const AppLayout =()=> {
   
 
   return (
+    <Provider store={store} >
     <React.Fragment>
       <Header />
       <Outlet />
       <Footer />
     </React.Fragment>
+    </Provider>
   );
 }
 
